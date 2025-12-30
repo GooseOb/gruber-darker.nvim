@@ -16,7 +16,7 @@ M.setup = function(c, opts)
 		CursorColumn = { bg = c.bg_l2 },
 		CursorLine = { bg = opts.transparent and c.niagara_d2 or c.bg_l1 },
 
-		Directory = { fg = c.niagara, bold = true },
+		Directory = { fg = c.niagara, bold = opts.bold },
 
 		-- Diff
 		DiffAdd = { fg = c.green },
@@ -79,7 +79,7 @@ M.setup = function(c, opts)
 		SpecialKey = { fg = c.fg_l2 },
 
 		-- Spell
-		SpellBad = { sp = c.red, underline = true },
+		SpellBad = { sp = c.red, underline = opts.underline },
 		SpellCap = { undercurl = opts.undercurl },
 		SpellLocal = { undercurl = opts.undercurl },
 		SpellRare = { undercurl = opts.undercurl },
@@ -109,19 +109,19 @@ M.setup = function(c, opts)
 		String = { fg = c.green, italic = opts.italic.strings },
 		Character = { fg = c.green, italic = opts.italic.strings },
 		Number = { fg = c.wisteria },
-		Boolean = { fg = c.yellow, bold = true },
+		Boolean = { fg = c.yellow, bold = opts.bold },
 		Float = { fg = c.wisteria },
 
 		Identifier = { fg = c.fg_l1 },
 		Function = { fg = c.niagara },
 
 		Statement = { fg = c.yellow },
-		Conditional = { fg = c.yellow, bold = true },
-		Repeat = { fg = c.yellow, bold = true },
-		Label = { fg = c.yellow, bold = true },
+		Conditional = { fg = c.yellow, bold = opts.bold },
+		Repeat = { fg = c.yellow, bold = opts.bold },
+		Label = { fg = c.yellow, bold = opts.bold },
 		Operator = { fg = c.fg, italic = opts.italic.operators },
-		Keyword = { fg = c.yellow, bold = true },
-		Exception = { fg = c.yellow, bold = true },
+		Keyword = { fg = c.yellow, bold = opts.bold },
+		Exception = { fg = c.yellow, bold = opts.bold },
 
 		PreProc = { fg = c.quartz },
 		Include = { fg = c.quartz },
@@ -130,15 +130,15 @@ M.setup = function(c, opts)
 		PreCondit = { fg = c.quartz },
 
 		Type = { fg = c.quartz },
-		StorageClass = { fg = c.yellow, bold = true },
-		Structure = { fg = c.yellow, bold = true },
-		Typedef = { fg = c.yellow, bold = true },
+		StorageClass = { fg = c.yellow, bold = opts.bold },
+		Structure = { fg = c.yellow, bold = opts.bold },
+		Typedef = { fg = c.yellow, bold = opts.bold },
 
 		Special = { fg = c.yellow },
 		SpecialChar = { fg = c.yellow },
 		Tag = { fg = c.yellow },
 		Delimiter = { fg = c.fg },
-		SpecialComment = { fg = c.wisteria, bold = true },
+		SpecialComment = { fg = c.wisteria, bold = opts.bold },
 		Debug = { fg = c.fg_l2 },
 
 		Underlined = { fg = c.wisteria, underline = opts.underline },
@@ -151,9 +151,9 @@ M.setup = function(c, opts)
 		markdownHeadingDelimiter = { fg = c.niagara, bold = opts.bold },
 		markdownCode = { fg = c.green },
 		markdownCodeBlock = { fg = c.green },
-		markdownItalic = { fg = c.wisteria, italic = true },
-		markdownBold = { fg = c.yellow, bold = true },
-		markdownCodeDelimiter = { fg = c.brown, italic = true },
+		markdownItalic = { fg = c.wisteria, italic = opts.bold },
+		markdownBold = { fg = c.yellow, bold = opts.bold },
+		markdownCodeDelimiter = { fg = c.brown, italic = opts.bold },
 		markdownError = { fg = c.fg, bg = c.bg_l1 },
 	}
 end

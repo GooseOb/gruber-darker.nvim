@@ -74,7 +74,7 @@ M.setup = function(c, opts)
 		["@text.title"] = { link = "Title" },
 		["@text.literal"] = { link = "Constant" },
 		["@text.uri"] = { fg = c.niagara, underline = opts.underline },
-		["@text.reference"] = { fg = c.yellow, bold = true },
+		["@text.reference"] = { fg = c.yellow, bold = opts.bold },
 		["@text.todo"] = { link = "Todo" },
 		["@text.note"] = { link = "Comment" },
 		["@text.warning"] = { link = "WarningMsg" },

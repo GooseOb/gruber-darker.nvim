@@ -1,29 +1,29 @@
 local M = {}
 
-M.setup = function(c)
+M.setup = function(c, opts)
 	return {
 		-- Errors
-		DiagnosticError = { fg = c.red, bold = true },
+		DiagnosticError = { fg = c.red, bold = opts.bold },
 		DiagnosticSignError = { fg = c.red },
-		DiagnosticUnderlineError = { sp = c.red, underline = true },
+		DiagnosticUnderlineError = { sp = c.red, underline = opts.underline },
 
 		-- Warnings
-		DiagnosticWarn = { fg = c.yellow, bold = true },
+		DiagnosticWarn = { fg = c.yellow, bold = opts.bold },
 		DiagnosticSignWarn = { fg = c.yellow },
-		DiagnosticUnderlineWarn = { sp = c.yellow, underline = true },
+		DiagnosticUnderlineWarn = { sp = c.yellow, underline = opts.underline },
 
 		-- Info
-		DiagnosticInfo = { fg = c.green, bold = true },
+		DiagnosticInfo = { fg = c.green, bold = opts.bold },
 		DiagnosticSignInfo = { fg = c.green },
-		DiagnosticUnderlineInfo = { sp = c.green, underline = true },
+		DiagnosticUnderlineInfo = { sp = c.green, underline = opts.underline },
 
 		-- Hints
 		DiagnosticHint = { fg = c.wisteria },
 		DiagnosticSignHint = { fg = c.wisteria },
-		DiagnosticUnderlineHint = { sp = c.wisteria, underline = true },
+		DiagnosticUnderlineHint = { sp = c.wisteria, underline = opts.underline },
 
 		-- Unnecessary / faded hint
-		DiagnosticUnnecessary = { sp = c.wisteria, underline = true },
+		DiagnosticUnnecessary = { sp = c.wisteria, underline = opts.underline },
 
 		-- Saga
 		SagaNormal = { link = "NormalFloat" },

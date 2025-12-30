@@ -1,13 +1,13 @@
 local M = {}
 
-M.setup = function(c)
+M.setup = function(c, opts)
 	return {
 		TelescopeNormal = { fg = c.fg },
-		TelescopeMatching = { fg = c.yellow, bold = true },
+		TelescopeMatching = { fg = c.yellow, bold = opts.bold },
 		TelescopeBorder = { link = "FloatBorder" },
 		TelescopePromptPrefix = { fg = c.niagara },
 
-		TelescopeTitle = { fg = c.white, bold = true },
+		TelescopeTitle = { fg = c.white, bold = opts.bold },
 
 		TelescopeSelection = {
 			fg = c.fg_l2,

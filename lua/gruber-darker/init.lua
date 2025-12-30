@@ -1,17 +1,45 @@
 local M = {}
 
+---@alias ColorSpec string RGB Hex string
+---@alias ColorTable table<string, ColorSpec>
+
+--- default config
+---@class GruberDarkerConfig
 M.config = {
 	transparent = false,
-	-- TODO
 	terminalColors = true,
-	italic = {},
-	invert = {},
+	bold = true,
+	invert = {
+		signs = false,
+		tabline = false,
+		visual = false,
+	},
+	---@type table<string, boolean>|false
+	italic = {
+		strings = true,
+		comments = true,
+		operators = false,
+		folds = true,
+	},
+	undercurl = true,
+	underline = true,
+	---@type fun(colors: ColorTable): table<string, table>
 	overrides = function(colors)
 		return {}
 	end,
 }
 
+---@param config? GruberDarkerConfig user configuration
 M.setup = function(config)
+	if config and config.italic == false then
+		config.italic = {
+			strings = false,
+			comments = false,
+			operators = false,
+			folds = false,
+		}
+	end
+
 	M.config = vim.tbl_deep_extend("force", M.config, config or {})
 end
 

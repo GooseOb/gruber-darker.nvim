@@ -1,16 +1,12 @@
 # gruber-darker.nvim
 
-I wanted to contribute to the [blazkowolf/gruber-darker.nvim](https://github.com/blazkowolf/gruber-darker.nvim) but found the code to be too complicated
-
-This plugin borrows highlight colors from the `blazkowolf` version with little changes to them. New features are:
+This plugin borrows highlight colors from [blazkowolf/gruber-darker.nvim](https://github.com/blazkowolf/gruber-darker.nvim) with little changes to them. New features are:
 
 - transparency support
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) integration.
+- easier override of highlight groups via `overrides` function.
 
-It is planned to add config features that are present in [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) config options
-
-> [!Warning]
-> For now it doesn't support most of the config options from above-mentioned plugins except those mentioned in the Configuration section
+Initially, I wanted to contribute to the `blazkowolf` version but found the code to be too complicated
 
 ## Installation
 
@@ -32,12 +28,29 @@ Add `opts` table or `config` function if you want to customize the theme
 
 ```lua
 {
-        transparent = false,
-        overrides = function(colors)
-            return {
-                -- Custom highlights
-                NormalFloat = { bg = colors.bg, fg = colors.fg },
-            }
-        end,
+	transparent = false,
+	terminalColors = true,
+	bold = true,
+	invert = {
+		signs = false,
+		tabline = false,
+		visual = false,
+	},
+	italic = {
+		strings = true,
+		comments = true,
+		operators = false,
+		folds = true,
+	},
+    -- you can also disable italics completely
+    -- italic = false
+	undercurl = true,
+	underline = true,
+	overrides = function(colors)
+        return {
+            -- Example highlight override
+            NormalFloat = { bg = colors.bg, fg = colors.fg },
+        }
+	end,
 }
 ```
