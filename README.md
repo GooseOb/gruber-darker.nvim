@@ -7,16 +7,16 @@ This plugin borrows highlight colors from the `blazkowolf` version with little c
 - transparency support
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) integration.
 
-It is planned to add config features that are present in [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) config options.
+It is planned to add config features that are present in [rebelot/kanagawa.nvim](https://github.com/rebelot/kanagawa.nvim) config options
 
 > [!Warning]
-> For now it doesn't support most of the config options from above-mentioned plugins except those mentioned in the Configuration section.
+> For now it doesn't support most of the config options from above-mentioned plugins except those mentioned in the Configuration section
 
 ## Installation
 
 ### Lazy
 
-Add `opts` table or `config` function if you want to customize the theme.
+Add `opts` table or `config` function if you want to customize the theme
 
 ```lua
 {
