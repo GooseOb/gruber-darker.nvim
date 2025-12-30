@@ -143,7 +143,7 @@ M.setup = function(c, opts)
 
 		Underlined = { fg = c.wisteria, underline = opts.underline },
 		Bold = { bold = opts.bold },
-		Italic = { italic = true },
+		Italic = { italic = opts.italic.others },
 
 		Todo = { fg = c.bg, bg = c.yellow },
 
@@ -151,9 +151,9 @@ M.setup = function(c, opts)
 		markdownHeadingDelimiter = { fg = c.niagara, bold = opts.bold },
 		markdownCode = { fg = c.green },
 		markdownCodeBlock = { fg = c.green },
-		markdownItalic = { fg = c.wisteria, italic = opts.bold },
+		markdownItalic = { fg = c.wisteria, italic = opts.italic.others },
 		markdownBold = { fg = c.yellow, bold = opts.bold },
-		markdownCodeDelimiter = { fg = c.brown, italic = opts.bold },
+		markdownCodeDelimiter = { fg = c.brown, italic = opts.italic.others },
 		markdownError = { fg = c.fg, bg = c.bg_l1 },
 	}
 end

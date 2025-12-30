@@ -41,6 +41,7 @@ Add `opts` table or `config` function if you want to customize the theme
 		comments = true,
 		operators = false,
 		folds = true,
+		others = true,
 	},
     -- you can also disable italics completely
     -- italic = false

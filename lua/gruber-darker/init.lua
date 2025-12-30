@@ -20,6 +20,7 @@ M.config = {
 		comments = true,
 		operators = false,
 		folds = true,
+		others = true,
 	},
 	undercurl = true,
 	underline = true,
@@ -37,6 +38,7 @@ M.setup = function(config)
 			comments = false,
 			operators = false,
 			folds = false,
+			others = false,
 		}
 	end
 

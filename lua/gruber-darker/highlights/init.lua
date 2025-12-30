@@ -15,7 +15,7 @@ function M.setup(colors, config)
 	config = config or require("kanagawa").config
 
 	local highlights = {}
-	for _, highlight in ipairs({ "editor", "telescope", "treesitter", "lsp", "rainbow" }) do
+	for _, highlight in ipairs({ "editor", "telescope", "treesitter", "lsp", "rainbow", "neotree" }) do
 		local mod = require("gruber-darker.highlights." .. highlight)
 		for hl, spec in pairs(mod.setup(colors, config)) do
 			highlights[hl] = spec
