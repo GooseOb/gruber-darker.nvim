@@ -1,0 +1,26 @@
+-- l means lighter (originally +)
+-- d means darker (originally -)
+return {
+	fg = "#e4e4ef",
+	fg_l1 = "#f4f4ff",
+	fg_l2 = "#f5f5f5",
+	white = "#ffffff",
+	black = "#000000",
+	bg_d1 = "#101010",
+	bg = "#181818",
+	bg_l1 = "#282828",
+	bg_l2 = "#453d41",
+	bg_l3 = "#484848",
+	bg_l4 = "#52494e",
+	red_d1 = "#c73c3f",
+	red = "#f43841",
+	red_l1 = "#ff4f58",
+	green = "#73c936",
+	yellow = "#ffdd33",
+	brown = "#cc8c3c",
+	quartz = "#95a99f",
+	niagara_d2 = "#303540",
+	niagara_d1 = "#565f73",
+	niagara = "#96a6c8",
+	wisteria = "#9e95c7",
+}
