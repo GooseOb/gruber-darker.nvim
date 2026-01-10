@@ -1,5 +1,7 @@
 # gruber-darker.nvim
 
+![](https://github.com/user-attachments/assets/baf7d6dd-297f-4a6b-b42d-8d0a1b7db00b)
+
 This plugin borrows highlight colors from [blazkowolf/gruber-darker.nvim](https://github.com/blazkowolf/gruber-darker.nvim) with little changes to them. New features are:
 
 - transparency support
