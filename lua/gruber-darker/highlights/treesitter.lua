@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c GruberDarkerColors
+---@param opts GruberDarkerConfig
 M.setup = function(c, opts)
 	return {
 		-- Comments
@@ -9,7 +11,7 @@ M.setup = function(c, opts)
 
 		-- Errors & none
 		["@error"] = {},
-		["@none"] = { fg = c.none, bg = c.none },
+		["@none"] = { fg = "NONE", bg = "NONE" },
 
 		-- Preprocessor
 		["@preproc"] = { link = "PreProc" },

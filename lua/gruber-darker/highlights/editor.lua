@@ -1,5 +1,7 @@
 local M = {}
 
+---@param c GruberDarkerColors
+---@param opts GruberDarkerConfig
 M.setup = function(c, opts)
 	local transparent = require("gruber-darker.utils.transparent")(opts.transparent)
 

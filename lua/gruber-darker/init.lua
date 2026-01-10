@@ -1,8 +1,5 @@
 local M = {}
 
----@alias ColorSpec string RGB Hex string
----@alias ColorTable table<string, ColorSpec>
-
 --- default config
 ---@class GruberDarkerConfig
 M.config = {
@@ -24,8 +21,8 @@ M.config = {
 	},
 	undercurl = true,
 	underline = true,
-	---@type fun(colors: ColorTable): table<string, table>
-	overrides = function(colors)
+	---@type fun(colors: GruberDarkerColors): table<string, table>
+	overrides = function()
 		return {}
 	end,
 }
@@ -54,7 +51,7 @@ M.load = function()
 	vim.o.termguicolors = true
 
 	local colors = require("gruber-darker.colors")
-	local term = require("gruber-darker.highlights.terminal").setup(colors, M.config)
+	local term = require("gruber-darker.highlights.terminal").setup(colors)
 	local highlights = require("gruber-darker.highlights").setup(colors, M.config)
 	require("gruber-darker.highlights").highlight(highlights, M.config.terminalColors and term or {})
 end

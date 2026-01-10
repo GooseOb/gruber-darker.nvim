@@ -1,7 +1,7 @@
 local M = {}
 
----@param highlights table
----@param termcolors table
+---@param highlights table<string, table<string, any>>
+---@param termcolors GruberDarkerTerminal
 function M.highlight(highlights, termcolors)
 	for hl, spec in pairs(highlights) do
 		vim.api.nvim_set_hl(0, hl, spec)
@@ -11,6 +11,9 @@ function M.highlight(highlights, termcolors)
 	end
 end
 
+---@param colors GruberDarkerColors
+---@param config GruberDarkerConfig
+---@return table<string, table<string, any>>
 function M.setup(colors, config)
 	config = config or require("kanagawa").config
 

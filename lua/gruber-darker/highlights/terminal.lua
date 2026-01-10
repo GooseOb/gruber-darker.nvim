@@ -1,7 +1,9 @@
 local M = {}
 
+---@param c GruberDarkerColors
 M.setup = function(c)
 	return {
+		---@class GruberDarkerTerminal
 		terminal_colors = {
 			[0] = c.bg_l1,
 			[1] = c.red_l1,

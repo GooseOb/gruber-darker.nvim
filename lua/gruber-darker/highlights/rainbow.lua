@@ -1,5 +1,6 @@
 local M = {}
 
+---@param c GruberDarkerColors
 M.setup = function(c)
 	return {
 		RainbowDelimiterRed = { fg = c.red_l1 },

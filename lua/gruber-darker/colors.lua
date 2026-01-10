@@ -1,6 +1,7 @@
--- l means lighter (originally +)
--- d means darker (originally -)
-return {
+--- l means lighter (originally +)
+--- d means darker (originally -)
+--- @class GruberDarkerColors
+local colors = {
 	fg = "#e4e4ef",
 	fg_l1 = "#f4f4ff",
 	fg_l2 = "#f5f5f5",
@@ -24,3 +25,5 @@ return {
 	niagara = "#96a6c8",
 	wisteria = "#9e95c7",
 }
+
+return colors
